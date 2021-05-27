@@ -6,12 +6,14 @@ from time import sleep
 @pytest.mark.usefixtures("dummy_setup")
 class TestDummyBooking:
 
+    @pytest.mark.sanity
     def test_provide_passenger_entry(self):
         global dm
         dm = DummyTicket(self.driver)
         dm.enter_first_name(user_name)
         dm.enter_lastname(last_name)
 
+    @pytest.mark.sanity
     def test_select_date_of_birth_and_other_info(self):
         dm.select_dob(dob_month, dob_year)
         dm.select_male_gender()
