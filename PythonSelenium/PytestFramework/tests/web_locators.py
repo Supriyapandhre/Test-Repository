@@ -1,0 +1,6 @@
+user_name_field_id = 'travname'
+surname_field_id = 'travlastname'
+comment_box_id = 'order_comments'
+calender_id = 'dob'
+male_gneder_id = 'sex_1'
+add_more_passenger_id = 'addmorepax'

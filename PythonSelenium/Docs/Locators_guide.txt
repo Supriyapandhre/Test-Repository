@@ -1,0 +1,107 @@
+Following Locator in Selenium through which we can interact with
+
+-> ID    :  travname
+-> NAME  :  travname
+
+-> CSS   :
+         examples:
+         #tagname[attribute='attribute']
+         -> input[name='travname']
+         -> input[id='travname']
+         -> p[id='travname_field']>input
+         -> div[class='col-1']>div>p[id='travname_field']>input
+
+-> XPATH :
+
+        1. Absolute Xpath : This type of xpath follow complete DOM structure to locate a element.
+
+           e.g. /html/body/div[1]/div/div/section[2]/div/div/div/div/form/div[3]/div[1]/div/p[1]/input
+
+        2. Relative Xpath : Relative xpath is shortest way to locate element, does not follow , complete DOM
+             structure.
+
+            a) Basic Xpath : //tagname[@attribute='attribute value']
+
+                            -> //input[@id='travname']
+                            -> //input[@name='travname']
+                            -> //*[@name='travname']
+                               # * MEANS SEARCH IN ALL THE TAG AND VERIFY THE REQUIRED PROPERTY.
+                            -> //p//*[@name='travname']
+                            -> //p//input[@name='travname']
+                            -> //p[@id='travname_field']//input
+                            -> //*[@id='travname_field']//input
+                            -> //div[@id='customer_details']//input[@id='travname']
+                            -> //div[@class='wcopc']//input[@id='travname']
+
+            b) Contains Method: contains method search with partial value of the attribute.
+                             -> syntax  //tagname[contains(@attribute='partial value')]
+                             ->  //input[contains(@class,'input-text')]   # it is showing matching element.
+                             ->  //input[contains(@name,'travlastname')]  # it is showing matching element.
+                             ->  //p[@id='travlastname_field']//input[contains(@id,'travlastname')] # unique
+                             -> //div[@class='col-1']//p[@id='travlastname_field']//input[contains(@id,'travlastname')]
+                             -> (//div[@class='col-1']//p[contains(@id, 'trav')]//input[contains(@id,'travlastname')])[1] # unique
+
+
+            c) Text method : syntax : //tagname[text()='Text Value']
+                             -> //a[text()='Home']
+                             -> //a[contains(text(),'Home')]
+                             -> //a[contains(text(),'Ho')]
+                             -> //li[@id='menu-item-13']//a[contains(text(),'Home')]
+
+            d) And OR METHOD. : SYNTAX : //tagname[@att1='attr1 value' and @attr2='attr2 value']
+                                          //tagname[@att1='attr1 value' or @attr2='attr2 value']
+
+                              -> //input[@class='input-text thwcfe-input-field' and @id='travname']
+                              -> //input[@class='input-text thwcfe-input-field' or @id='travname']  # multiple match
+                              -> //p[@id='travname_field']//input[@class='input-text thwcfe-input-field' and @id='travname']
+                              -> //input[@class='input-text thwcfe-input-field' and @name='fromcity']
+                              -> //input[@class='input-text thwcfe-input-field' or @name='fromcity']
+                              -> (//ul[@id='checkout-products']//li[@class='product-item '])[1]
+
+             ADVANCE XPATH : XPATH AXES
+
+             1) following : It always follow the top down approach.
+                            This method helps to identify all the brother and sister tags which belongs to different parent
+                            but on same level, and it follows only top down approach, it means all the tag coming after
+                            reference tag can be located.
+                            -> //td/a[text()='University of Delhi']//following::td[text()='New Delhi']
+
+
+             2)  following-sibling : It always follow the top down approach
+                      Following-sibling method helps to identify all the younger siblings with the refrence of
+                      elder child, all the sibling should be on same level or child of single parent tag.
+
+                            -> //b[text()='1']//parent::td//following-sibling::td
+                            -> //a[text()='University of Delhi']//parent::td//following-sibling::td
+                            -> //input[@id='product_551']//ancestor::li//following-sibling::li
+
+             3) parent :   Parent method helps to identify just parent of any tag. (just one level up)
+                            -> //td[text()='New Delhi']//parent::tr//td/a[text()='University of Delhi']
+                            -> //td[text()='Chennai']//parent::tr//td/b
+
+             4) Ancestor :   Ancestor method help to access all the grand parent or great grand parents of the particular tag.
+                            -> //td[text()='New Delhi']//ancestor::div[@class='container']//h3
+                            -> //td[text()='New Delhi']//ancestor::div[@class='container']//following-sibling::div//h2[text()='Related resources']
+
+             5) Child :     Child method helps to access all the grand child (child of child) of the particular tag.
+                            syntax : //tagname[@attribute='value']//child::childtag
+                             -> //ul[@id='checkout-products']//child::li//input[@id='product_3186']
+                             -> //ul[@id='checkout-products']//child::input[@id='product_551']//ancestor::li
+
+
+             6). Preceding:  This method helps to identify all the element which are coming before reference element.
+
+                    syntax //tagname[@attribute='value']//preceding:tagname
+                    -> //input[@id='travlastname']//preceding::input
+                    -> //nav[@id='navbar']//a[text()='Blog' and @href='/blog']//preceding::a
+
+
+             7). Descendant : This method helps to identify all the descendant locators from current node
+
+                      syntax : //tagname[@attribute='value']//descendant::tagname
+                      //nav[@id='navbar']//descendant::div
+
+
+-> TEXT
+-> Link
+-> Partial Link

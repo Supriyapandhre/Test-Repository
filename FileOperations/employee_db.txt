@@ -1,0 +1,3 @@
+user_1={'username': empl1, 'age':45, 'salary': 6000}
+user_2={'name': 'Tejas', 'surname': 'sharma', 'salary': 56660, 'age': 34}
+user_3={'name': 'rahul', 'age': 60, 'surname': 'sharma', 'address': 'Newyork'}

@@ -1,0 +1,74 @@
+Purpose of automation Framework
+
+-> Enhance the efficiency of the team member/development team
+-> Reduce the cross dependcy of the cases, with proper
+   framework structure
+-> Reduce the dependecy on manual testing
+-> Find more and more product issue
+-> Remove code redundancy.
+-> Proper reporting of automated test cases.
+-> Lower Maintaince of automation code.
+
+
+Type of Framework
+
+-> Linear or Scripting Framework: When we write single script code
+                  that type of framework is knows as linear Framework
+
+-> Modular Framework : In this framework we design module for each feature
+               and re-use them when ever required.
+
+-> Data driven Framework :  In this framework we read input data 
+                from external and use in automation. e.g read data
+                Excel sheet or Json file
+
+-> Keyword Driven Framework : In this framework all the keywords are
+                pre-written, just we need use it design test cases
+                e.g   Robotframework
+
+-> BDD(Behaviour Driven Framwork) : In this framework code is design
+              as per feature beviour, and that will be in plain english
+              so even non technical person can use it, and desing the test 
+              cases
+
+
+-> Hybrid Framework : This framework is combination of all the above framework.
+                it is very flexible to extend upto any level.
+
+        
+              
+              
+###################################################################################
+Design Automation Framework:
+
+(We will hybrid framework with page object model pattern)
+
+1. Action code should be re-usable
+
+   -> e.g click_element, send_keys
+   
+2. Element locator keep it seperate and re-usable.
+   -> e.g ID, name, CSS
+
+3. Product code should be manage seperately as per features.
+
+4. Test Data should manage seperately.
+    e.g. excel_sheet, json, yml, python
+
+5. Test cases or test suites should manage separately.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+Software Testing is JAVA that the
+process of executing a code
+program or system with the
+intent of finding JAVA errors Or
+It involves any activity aimed
+toward evaluating an attribute or
+capability of a JAVA application program
+or system and determining that
+it meets its required
+result.

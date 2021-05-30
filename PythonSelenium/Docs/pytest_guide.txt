@@ -1,0 +1,80 @@
+# command to install pytest on out machine
+
+-> pip install pytest
+
+# pytest file name should always start with test_ as a prefix
+
+e.g   test_smoke.py
+
+
+# Command to execute pytest test cases
+
+pytest -v test_first_testsuite.py
+
+
+# execute test cases with their markers.
+
+-> pytest -v -m sanity <test_filename>
+
+
+# Fixture :
+
+Setup and Teardown concept for test cases execution.
+
+
+
+###########################
+
+Pytest Framework
+
+1. Test Suite File
+    test_<suite_name>.py
+
+2. Test Function as like test cases
+
+    def test_<function>():
+         test code
+
+3. We can a grouping of test cases using markers
+   @pytest.mark.smoke
+   def test_function1:
+	<test code>
+
+   @pytest.mark.sanity
+   def test_function1:
+	<test code>
+
+
+4. Run test case commandline 
+
+   -> pytest -v -m "marker"  test_suite.py
+
+5. Fixture of the test cases
+   -> fixture is a pre-requisite that user wants to execute before
+      after copletion of test function execution.
+
+    @pytest.fixture(scope='function')
+     def setup():
+      <fixture code>
+       yield
+      <Tead Down code>
+
+
+  -> use of text ficture in test function name.
+
+      det test_functio4(setup):
+	<test code>
+
+
+6. Generate a HTML report with external Package
+
+ -> Install package with given command
+  #  pip install pytest-html-reporter
+   
+
+ -> Run test cases to generate the HTML report.
+  #  pytest -v test_sanity.py --html-report=./report/report.html
+    
+
+
+

@@ -1,0 +1,4 @@
+2021-05-20 20:03:56 [INFO] : test_booking_feature.py:12 :: test_book_bus_and_verify execution started
+2021-05-20 20:03:56 [INFO] : bus_booking_page.py:9 :: Bus Booking class initiated
+2021-05-20 20:03:56 [INFO] : selenium_code.py:11 :: browser initiated
+2021-05-20 20:03:56 [INFO] : selenium_code.py:36 :: this element is picked to configure : ('txtSource', 'id')

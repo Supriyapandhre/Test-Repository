@@ -1,0 +1,8 @@
+2021-05-18 20:33:43 [INFO] : test_booking_feature.py:12 :: test_book_bus_and_verify execution started
+2021-05-18 20:33:43 [INFO] : bus_booking_page.py:9 :: Bus Booking class initiated
+2021-05-18 20:33:43 [INFO] : selenium_code.py:11 :: browser initiated
+2021-05-18 20:33:43 [INFO] : selenium_code.py:36 :: this element is picked to configure : ('txtSource', 'id')
+2021-05-18 20:33:43 [INFO] : bus_booking_page.py:15 :: entered this text : Pune
+2021-05-18 20:33:43 [INFO] : selenium_code.py:29 :: this element is picked to configure : ("//li[contains(text(), 'Swargate, ')]/strong[text()='Pune']", 'xpath')
+2021-05-18 20:33:43 [INFO] : bus_booking_page.py:17 :: clicked on this element : ("//li[contains(text(), 'Swargate, ')]/strong[text()='Pune']", 'xpath')
+2021-05-18 20:33:48 [INFO] : test_booking_feature.py:16 :: test_book_bus_and_verify execution finished

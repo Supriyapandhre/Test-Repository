@@ -1,0 +1,23 @@
+# command to install pytest on out machine
+
+-> pip install pytest
+
+# pytest file name should always start with test_ as a prefix
+
+e.g   test_smoke.py
+
+
+# Command to execute pytest test cases
+
+pytest -v test_first_testsuite.py
+
+
+# execute test cases with their markers.
+
+-> pytest -v -m sanity <test_filename>
+
+
+# Fixture :
+
+Setup and Teardown concept for test cases execution.
+

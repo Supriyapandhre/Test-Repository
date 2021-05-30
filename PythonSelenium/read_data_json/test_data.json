@@ -1,0 +1,30 @@
+{
+  "url" : "https://www.dummyticket.com/dummy-ticket-for-visa-application/",
+  "browser" : "chrome",
+  "pass_name" : "Poter",
+  "pass_surname":"Harry",
+  "comment" : "We are booking ticket to visit singapore",
+  "date_of_birth" : {
+    "month" : "Aug",
+    "Year" : 1990,
+    "date" : 24
+  },
+  "users" : {
+      "user1": {
+            "username": "john",
+            "password": "harry"
+               },
+      "user2" : {
+            "username": "Supriya",
+            "password": "Shinde"
+                },
+      "user3" : {
+            "username": "Vipin",
+            "password": "Sharma"
+                },
+      "user4" : {
+            "username": "Shivleela",
+            "password": "Gupta"
+                }
+      }
+}

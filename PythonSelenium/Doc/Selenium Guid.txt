@@ -1,0 +1,50 @@
+Things Required to Work on Automation
+
+- Python  : Done
+- Selenium (Tools) : pip install selenium
+- Basic knowlenge of HTML (Hyper Text Markup Languge)
+- Browser Driver
+- Locators Identification
+
+#######################################
+Selenium : Web Automation Tools, which will work with the
+           browser element
+         -> It works with multiple Language (Java, Python, C#, Ruby)
+         -> Webdriver
+
+Browser -> Chrome : chromedriver 
+
+
+########################################
+Interact with Web element , like textbox, button, radio button
+with locators 
+Locator : locator are created with the help to elements attribute.
+
+- ID :
+- Name :
+- css :
+- xpath
+- Link
+- Text
+- Tagname
+- Partial link
+
+
+- ID : Get ID by Element Attribute
+
+- Name : Get ID Element Attribute
+
+- css :   tagname[attribute='attribute value']
+
+       - input[name='q']
+       - input[title='Search']
+       - input[aria-label='Search']
+       - div[jsname='gLFyf']>input[name='q']
+
+
+- XPATH:
+      1:  Absolute XPath : This path follows complete dom, structure to locate a element.
+      2 : Relative XPath : Relative xpath does not follow dom structure, we can easily identify element
+      by their attribute.
+
+
